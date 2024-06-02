@@ -1,0 +1,35 @@
+Interface:
+    Label:
+        text: "[color=#FFBF00][b]Hello[/b][/color] World"
+        color: 0.5,0.5,1,1
+        font_size: '32sp'
+        pos: 100, 200
+        markup: True
+
+    Button:
+        text: "[color=#FFBF00][b]Hello[/b][/color] World"
+        color: 0.5,0.5,1,1
+        font_size: '16sp'
+        size_hint: None, None
+        size: 200,100
+        pos: root.width/2 - 100, root.height/2 - 50
+        # background_normal: '' image
+        # background_down: '' image
+        markup: True
+        # disabled: True
+        # background_disabled_normal: ''
+        # background_disabled_down: ''
+        # on_press: root.print_message()
+        on_press: app.print_message()
+        on_release: root.print_message()
+
+    TextInput:
+        size_hint: 0.5, None
+        height: 100
+        hint_text: 'Enter your name'
+        pos_hint: {"center_x": 0.5, "center_y": 0.5}
+        multiline: False
+        on_text_validate: root.print_message()
+        on_focus: app.print_message() # called in and out focus
+
+
